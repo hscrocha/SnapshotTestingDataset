@@ -17,6 +17,10 @@ function readPositionFile(){
     position = parseInt( content.toString() );
 }
 
+function writePositionFile(){
+    fs.writeFileSync('pos.txt',position.toString());
+}
+
 function callShell(repo){
     shell.exec(`./ghtarscript.sh ${repo}`);
 }
@@ -34,9 +38,10 @@ async function main(){
     for(let max=12; position<max; position++){
         console.log(`*** Repo ${position} : ${lstRepos[position]}`);
         callShell(lstRepos[position].replace(/(\r\n|\n|\r)/gm, ""));
+        writePositionFile();
         await sleep(1000);
     }
-    console.log(`End. ${position}`);
+    console.log(`\n**End. ${position}`);
 }
 
 main();
