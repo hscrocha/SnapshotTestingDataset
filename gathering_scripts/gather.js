@@ -35,7 +35,7 @@ async function main(){
     console.log("Init.");
     readRepoFile();
     readPositionFile();
-    for(let max=500; position<max;){
+    for(let max=600; position<max;){
         console.log(`*** Repo ${position} : ${lstRepos[position]}`);
         callShell(lstRepos[position].replace(/(\r\n|\n|\r)/gm, ""));
         position++;
