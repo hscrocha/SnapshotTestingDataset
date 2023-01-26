@@ -3,13 +3,18 @@ const fs = require('fs');
 
 let lstRepos = null;
 let position = 0;
-console.log('Hello.');
+let ghtoken = '';
 
 function readRepoFile(){
     console.log('Reading Repo Files...');
     let content = fs.readFileSync('listrepos.txt');
     lstRepos = content.toString().split("\n");
     //console.log(`How many repos: ${lstRepos.length}`);
+}
+
+function readTokenFile(){
+    let content = fs.readFileSync('mytoken.txt');
+    ghtoken = content.toString().trim();
 }
 
 function readPositionFile(){
@@ -22,7 +27,7 @@ function writePositionFile(){
 }
 
 function callShell(repo){
-    shell.exec(`./ghtarscript.sh ${repo}`);
+    shell.exec(`./gather_script.sh ${repo} ${ghtoken}`);
 }
 
 function sleep(ms) {
@@ -32,8 +37,9 @@ function sleep(ms) {
 }
 
 async function main(){
-    console.log("Init.");
+    console.log('Starting Fetch_Repo_Tarball.js.');
     readRepoFile();
+    readTokenFile();
     readPositionFile();
     for(let max=lstRepos.length; position<max;){
         console.log(`*** Repo ${position} : ${lstRepos[position]}`);
