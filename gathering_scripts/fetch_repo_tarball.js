@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: MIT
+// Copyright 2023
+
 const shell = require('shelljs');
 const fs = require('fs');
 

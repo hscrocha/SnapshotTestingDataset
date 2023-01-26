@@ -1,3 +1,6 @@
+## SPDX-License-Identifier: MIT
+## Copyright 2023, 2022
+
 from urllib.parse import urlparse
 from urllib.parse import parse_qs
 import requests
