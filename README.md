@@ -2,7 +2,7 @@
 
 This is a dataset of GitHub repositories that were tagged with Jest, for JS or TS languages, that used Snapshot Testing. Information on all repositories is available in the file "0_Snapshot Testing Dataset.xlsx" (named to be the very first file on Zenodo, here it is located on the root folder). 
 
-In the folder 'repos_targz', you will find all compact targz files representing repository as "<user>_<repository_name>.tar.gz". We split large repositories (>50MB) using the "split" command on Unix-type shell (use cat to rejoin them). 
+In the folder 'repos_targz', you will find all compact targz files representing repository as "<github_username>_<repository_name>.tar.gz". We split large repositories (>50MB) using the "split" command on Unix-type shell (use cat to rejoin them). 
 
 In total there are 686 repositories. We collected only public repositories that were tagged with the Jest keyword, for JavaScript or Typescript, had at least 1 star, and at least 1 snapshot file. The spreadsheet data was collected on July 13, 2022.
 
