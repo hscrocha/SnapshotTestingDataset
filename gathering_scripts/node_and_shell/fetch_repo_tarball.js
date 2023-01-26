@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-// Copyright 2023
+// Copyright 2023 Henrique Rocha
 
 const shell = require('shelljs');
 const fs = require('fs');
