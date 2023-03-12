@@ -8,4 +8,4 @@ In total there are 686 repositories. We collected only public repositories that 
 
 In the folder 'gathering_scripts', we have all scripts used to gather this data. There the subfolder "python" has all python scripts to find repositories based on queries and save their attributes, and "node_and_shell" contain the node and shell scripts to download a tarball of the repository. Therefore you should first use the python scripts to collect repositories & their attribute, and later use the node & shell to download a copy of the repositories. Moreover, inside each script folder there is a Readme file with instructions and examples.
 
-This GitHub repository is an exact copy of a persistent archieved version on Zenodo (https://doi.org/10.5281/zenodo.7566672). But it is much better organizef into folders here on GitHub, additionally, the README files display better here.
+This GitHub repository is an exact copy of a persistent archieved version on Zenodo (https://zenodo.org/record/7724641). But it is much better organizef into folders here on GitHub, additionally, the README files display better here.
